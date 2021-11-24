@@ -8,6 +8,25 @@
     <link rel="icon" href="https://lh3.googleusercontent.com/proxy/7ytbxkmMme0IPSvsHZN9ZFd19oIZ9lqtq_402Z1UbIr0-1yMU_OoIbwaJsZ3x3ZEoQtZTJ4lR9hHLxSQibKiacHqfNyEEKdNunHv4J9hohCTtNlqO0yfb2rYGQhxl1M"
 </head>
 <body>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+<script>
+function SubForm(){
+    $.ajax({
+        url:'https://api.apispreadsheets.com/data/20789/',
+        type:'post',
+        data:$("#myForm").serializeArray(),
+        success: function(){
+          alert("Form Data Submitted :)")
+        },
+        error: function(){
+          alert("There was an error :(")
+        }
+    });
+}
+</script>
     <div class="container">
         <form class="form" id="login">
             <h1 class="form__title">Login</h1>
