@@ -17,7 +17,7 @@ function SubForm(){
     $.ajax({
         url:'https://api.apispreadsheets.com/data/20789/',
         type:'post',
-        data:$("#myForm").serializeArray(),
+        data:$("#createAccount").serializeArray(),
         success: function(){
           alert("Form Data Submitted :)")
         },
